@@ -1,5 +1,5 @@
 # Corso-Oracle
-## accesso studenti
+## Accesso LAB studenti:
 Nel foglio excel trovate le indicazioni per l'accesso ai labs.
 
 https://cedelcloud-my.sharepoint.com/:x:/g/personal/m_francesca_elis_org/EaXESZWTU7BLs1D4BMU1acAB78QKnzipy6uCBeGgdAldgg?e=I7hmdc
@@ -12,11 +12,14 @@ Per entrare nella bash shell dell'istanza Oracle digitate **oracle**
 
 Per fare il restart dell'instanza Oracle digitare **restart**
 
-## accesso al Database
+## Accesso al Database:
 
-L'instanza Oracle è composta da un root container Database ed un Pluggable Database
+L'instanza Oracle è composta da un root container Database **ORCLCDB** ed un Pluggable Database **ORCLPDB1**
 
-- SID:
+- username: sys
+- role: sysdba
+- password: Oradoc_db1
+-
 
 ## da un client esterno (sqlplus o SQLdeveloper) per connettersi
 ```
