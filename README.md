@@ -6,11 +6,10 @@ https://cedelcloud-my.sharepoint.com/:x:/g/personal/m_francesca_elis_org/EaXESZW
 
 la username e la password dell'utente amministratore della macchina è **student**
 
-Per fare lo start dell'istanza Oracle digitate da shell **start**
-
-Per entrare nella bash shell dell'istanza Oracle digitate **oracle**
-
-Per fare il restart dell'instanza Oracle digitare **restart**
+- Per entrare nella bash shell dell'istanza Oracle digitate **oracle**
+Nel caso di messaggio d'errore:
+- Per fare lo start dell'istanza Oracle digitate da shell **start**
+- Per fare il restart dell'instanza Oracle digitare **restart**
 
 ## Accesso al Database:
 
