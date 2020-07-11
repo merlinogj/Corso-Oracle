@@ -16,17 +16,36 @@ Nel caso di messaggio d'errore:
 
 ## Accesso al Database:
 
-L'instanza Oracle è composta da un root container Database **ORCLDB** ed un Pluggable Database **ORCLPDB1**
+L'instanza Oracle è composta da un root container Database **ORCLCDB** ed un Pluggable Database **ORCLPDB1**
 
 - username: sys
 - role: sysdba
 - password: Oradoc_db1
-- SERVICE_NAME: ORCLDB
+- SERVICE_NAME: ORCLCDB
+- domain: localdomain
 
-## da un client esterno (sqlplus o SQLdeveloper) per connettersi
+## Usare un client esterno (sqlplus o SQLdeveloper) per connettersi
 ```
-$ sqlplus sys/Oradoc_db1@ORCLDB as sysdba
+student@VM1:~$ sqlplus sys/Oradoc_db1@ORCLCDB as sysdba
 ```
+### accedere allo schema hr nel pluggable ORCLPDB1
+```
+student@VM1:~$ oracle
+[oracle@VM1 /]$ sqlplus hr/hr@ORCLPDB1
+
+SQL*Plus: Release 12.2.0.1.0 Production on Sat Jul 11 07:58:59 2020
+
+Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+
+Last Successful login time: Fri Jul 10 2020 20:53:11 +00:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production
+
+SQL>
+
+```
+### accedere come sysdba nel pluggable  ORCLPDB1
 
 ## Come creare il connettore TNS per accedere dal client a linea di comando
 
@@ -34,9 +53,9 @@ Using this <mapped host port> and <ip-address of host> create tnsnames.ora in th
 
 ### creare il file **tnsnames.ora** in ``/home/student/``
 ```
-ORCLCDB=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))
+ORCLCDB=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.1.1)(PORT=1521))
     (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCLCDB.localdomain)))
-ORCLPDB1=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))
+ORCLPDB1=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.1.1)(PORT=1521))
     (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCLPDB1.localdomain)))
 ```
 ### esportare la variabile TNS_ADMIN e renderla persistente
