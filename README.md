@@ -18,11 +18,11 @@ Nel caso di messaggio d'errore:
 
 L'instanza Oracle è composta da un root container Database **ORCLCDB** ed un Pluggable Database **ORCLPDB1**
 
-- username: sys
-- role: sysdba
-- password: Oradoc_db1
-- SERVICE_NAME: ORCLCDB
-- domain: localdomain
+- username: **sys**
+- role: **sysdba**
+- password: **Oradoc_db1**
+- SERVICE_NAME: **ORCLCDB** o **ORCLPDB1**
+- domain: **localdomain**
 
 ## Usare un client esterno (sqlplus o SQLdeveloper) per connettersi
 ```
