@@ -46,10 +46,13 @@ SQL>
 
 ```
 ### accedere come sysdba nel pluggable  ORCLPDB1
+```
+student@VM1:~$ sqlplus sys/Oradoc_db1@ORCLPDB1 as sysdba
+```
 
-## Come creare il connettore TNS per accedere dal client a linea di comando
+## Come creare il connettore TNS per accedere dal client ``sqlplus`` a linea di comando
 
-Using this <mapped host port> and <ip-address of host> create tnsnames.ora in the directory pointed to by environment variable TNS_ADMIN.
+E' possibile accedere tramite **sqlplus** specificando **@<SERVICE_NAME>** creando il file  ``tnsnames.ora`` e farlo puntare dalla vatiabile ambientale **TNS_ADMIN**.
 
 ### creare il file **tnsnames.ora** in ``/home/student/``
 ```
