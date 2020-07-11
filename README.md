@@ -9,8 +9,16 @@ https://cedelcloud-my.sharepoint.com/:x:/g/personal/m_francesca_elis_org/EaXESZW
 la username e la password dell'utente amministratore della macchina è **student**
 
 - Per entrare nella bash shell dell'istanza Oracle digitate **oracle**
+```
+student@VM1:~$ oracle
+[oracle@VM1 /]$
+```
 
 Nel caso di messaggio d'errore:
+```
+student@VM1:~$ oracle
+Error response from daemon: Container adaea30a915b8ffe16ffc7548c3bb6b0529bead3a0013e767d1b61d8973905af is not running
+```
 - Per fare lo start dell'istanza Oracle digitate da shell **start**
 - Per fare il restart dell'instanza Oracle digitare **restart**
 
