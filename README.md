@@ -76,7 +76,14 @@ $ echo 'export TNS_ADMIN=/home/student/' >> .bashrc
 ### Copiare directory labs
 ```
 cd
-git clone  https://github.com/merlinogj/Corso-Oracle.git 
+git clone  https://github.com/merlinogj/Corso-Oracle.git
 mv Corso-Oracle/labs/ labs/
 sudo apt install openssh-server
+
+oracle
+
+[oracle@VM1 /]$ cd  
+[oracle@VM1 ~]$ scp student@localhost:/home/student/labs/* .
+
+
 ```
