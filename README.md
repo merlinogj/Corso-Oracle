@@ -83,7 +83,9 @@ sudo apt install openssh-server
 oracle
 
 [oracle@VM1 /]$ cd  
-[oracle@VM1 ~]$ scp student@localhost:/home/student/labs/* .
+[oracle@VM1 /]$ mkdir labs
+[oracle@VM1 /]$ cd labs
+[oracle@VM1 ~/labs]$ scp student@localhost:/home/student/labs/* .
 
 
 ```
