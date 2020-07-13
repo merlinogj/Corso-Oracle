@@ -73,3 +73,10 @@ ORCLPDB1=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.1.1)(PORT=1521))
 ```
 $ echo 'export TNS_ADMIN=/home/student/' >> .bashrc
 ```
+### Copiare directory labs
+```
+cd
+git clone  https://github.com/merlinogj/Corso-Oracle.git 
+mv Corso-Oracle/labs/ labs/
+sudo apt install openssh-server
+```
